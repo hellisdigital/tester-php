@@ -3,12 +3,12 @@ html, body {
 }
 
 .background {
-  background-color: #999999;
+  background-image: url("../img/Gregory_Potapov_Wallpaper.jpg");
 }
 
 .mainBox {
   width: 40vw;
-  height: 70vh;
+  height: 55vh;
 }
 
 .loginBox {
@@ -34,6 +34,10 @@ html, body {
   padding-bottom: 10px;
 }
 
+.loginBox button {
+  margin-top: 10px;
+}
+
 .registerBox {
   background-color: #3F51B5;
   display: -webkit-box;
@@ -55,6 +59,10 @@ html, body {
 .registerBox h4 {
   font-weight: bold;
   padding-bottom: 10px;
+}
+
+.registerBox button {
+  margin-top: 10px;
 }
 
 .btn-primary {
