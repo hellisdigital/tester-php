@@ -19,7 +19,7 @@
 <body>
     <div class="root">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
             <a href="#" class="navbar-brand">Panel Administratora</a>
 

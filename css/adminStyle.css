@@ -4,13 +4,97 @@ html, body {
 
 .root nav {
   padding: 20px;
+  background-color: #303f9f;
+  color: #fff;
 }
 
 .root .tableDiv {
+  background-color: #fff;
   margin: 30px;
 }
 
 .root .tableDiv h3 {
   margin-top: 30px;
+}
+
+.addQuestionForm {
+  width: 90vw !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addQuestionForm textarea {
+  width: 12vw !important;
+  height: 80px !important;
+}
+
+.addQuestionForm .form-answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addQuestionForm button {
+  width: 120px !important;
+  height: 70px !important;
+}
+
+.addQuestionForm .form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addQuestion {
+  margin-bottom: 20px;
+  padding-top: 1px;
+  background-color: #BDBDBD;
+}
+
+.questionDiv {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  font-weight: 600;
 }
 /*# sourceMappingURL=adminStyle.css.map */
