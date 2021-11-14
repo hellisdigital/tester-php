@@ -15,4 +15,17 @@ html, body {
 .root .tableDiv h3 {
   margin-top: 30px;
 }
+
+.correct .color {
+  background-color: rgba(0, 255, 0, 0.35);
+}
+
+.incorrect .color {
+  background-color: rgba(255, 0, 0, 0.35);
+}
+
+.correctAnswer {
+  font-weight: bold;
+  background-color: rgba(0, 0, 255, 0.1) !important;
+}
 /*# sourceMappingURL=userStyle.css.map */
