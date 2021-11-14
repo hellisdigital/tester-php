@@ -1,7 +1,6 @@
 <?php
 session_start();
 session_destroy();
-
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,6 @@ session_destroy();
 </head>
 
 <body>
-
 </body>
 
 </html>

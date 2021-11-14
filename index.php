@@ -32,16 +32,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $login = $_POST['loginInput'];
             print_r($login);
 
+            // hasło hashowane sha256
             $hashedPassword = hash('sha256', $_POST['passwordInput']);
 
+            // sprawdzamy czy użytkownik istnieje
             $searchUser = "SELECT * FROM `users` WHERE login = '$login' LIMIT 1";
             $search_result = $mysqli->query($searchUser) or die('Problem z bazą danych');
 
             if ($rec = $search_result->fetch_array()) {
 
+                // sprawdzamy czy hasło się zgadza
                 if ($hashedPassword == $rec['password']) {
+
                     echo '<script type="text/javascript">console.log("poprawne hasło");</script>';
 
+                    // sprawdzamy czy użytkownik jest adminem
                     if ($rec['isAdmin'] == 1) {
 
                         $_SESSION['adminSession'] = true;
@@ -53,11 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                 } else {
 
+                    // jeśli użytkownik podał nieprawidłowe hasło wyświetlamy komunikat
                     echo '<script type="text/javascript">alert("Niepoprawne hasło")</script>';
                     break;
                 }
             } else {
 
+                // jeśli użytkownik nie istnieje wyświetlamy komunikat
                 echo '<script type="text/javascript">alert("Użytkownik nie istnieje")</script>';
                 break;
             }
@@ -70,49 +77,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $passwordRegister = $_POST['passwordInputRegister'];
             $passwordRegisterValidate = $_POST['passwordInputRegisterValid'];
 
+            // login ma mniej niż 6 znaków
             if (strlen($loginRegister) < 6) {
 
                 echo '<script type="text/javascript">alert("Login powinnien składać się z przynajmniej 6 znaków")</script>';
                 break;
             }
 
+            // hasło ma mniej niż 6 znaków
             if (strlen($passwordRegister) < 6) {
 
                 echo '<script type="text/javascript">alert("Hasło powinno składać się z przynajmniej 6 znaków")</script>';
                 break;
             }
 
+            // hasła się nie zgadzają
             if ($passwordRegister !=  $passwordRegisterValidate) {
                 echo '<script type="text/javascript">alert("Hasła nie są takie same")</script>';
                 break;
             }
 
+            // szukamy użytkownika z taką samą nazwą 
             $searchUser = "SELECT * FROM `users` WHERE login = '$loginRegister' LIMIT 1";
             $search_result = $mysqli->query($searchUser) or die('Problem z bazą danych');
 
+            // jeśli wynik zwróci użytkownika => użytkownik istnieje, nie możemy go zarejstrować po raz drugi
             if ($search_result->fetch_array()) {
 
                 echo '<script type="text/javascript">alert("Nazwa użytkownika: ' . $loginRegister . ' jest zajęta")</script>';
                 break;
             } else {
 
+                // wstawiamy rekord użytkownika
                 $hashedPassword = hash('sha256', $passwordRegister);
                 $addUser = "INSERT INTO `users` (login, password, isAdmin, correctCount, incorrectCount) VALUES ('$loginRegister', '$hashedPassword', 0,0,0)";
 
+                // jeśli operacja się powiedzie wyświetlamy komunikat
                 if ($mysqli->query($addUser) == true) {
 
                     echo '<script type="text/javascript">alert("Konto: ' . $loginRegister . ' utworzone. Możesz się teraz zalogować")</script>';
                     break;
                 }
             }
-
             break;
     }
 }
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pl">
@@ -136,7 +146,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <div class="background d-flex justify-content-center align-items-center h-100">
 
+
         <div class="mainBox row">
+
 
             <div class="loginBox col-sm">
 
@@ -154,11 +166,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="passwordInput" class="form-label">Hasło</label>
                         <input id="passwordInput" type="password" class="form-control" name="passwordInput" required>
                     </div>
+
                     <button type="submit" class="btn btn-primary">Zaloguj</button>
 
                 </form>
 
             </div>
+
 
             <div class="registerBox col-sm">
 
@@ -181,12 +195,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for=passwordInputRegisterValid" class="form-label">Powtórz Hasło</label>
                         <input id="passwordInputRegisterValid" type="password" class="form-control" name="passwordInputRegisterValid" required>
                     </div>
+
                     <button type="submit" class="btn btn-primary">Zarejstruj</button>
 
                 </form>
 
             </div>
+
+
         </div>
+
+
     </div>
 
 </body>
