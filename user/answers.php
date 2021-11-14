@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="pl">
+
 <head>
 
     <meta charset="UTF-8">
@@ -41,9 +44,11 @@
         </nav>
 
         <div class="answers">
+
             <table class="table table-striped table-bordered">
 
                 <thead class="thead-dark">
+
                     <tr>
                         <th scope="col">Pytanie</th>
                         <th scope="col">Odpowiedź A</th>
@@ -53,6 +58,7 @@
                         <th scope="col">Twoja Odpowiedź</th>
                         <th scope="col">Poprawna Odpowiedź</th>
                     </tr>
+
                 </thead>
 
                 <?php
@@ -78,38 +84,39 @@
                     if ($rec = $correct->fetch_array()) {
 
                         echo '<tr class="correct">
-                            <td class="color">' . $rec['content'] . '</td>
-                            <td class="color">' . $rec['answerA'] . '</td>
-                            <td class="color">' . $rec['answerB'] . '</td>
-                            <td class="color">' . $rec['answerC'] . '</td>
-                            <td class="color">' . $rec['answerD'] . '</td>
-                            <td>' . $answers[$index] . '</td>
-                            <td class="correctAnswer">' . $rec['correctAnswer'] . '</td>
-                        </tr>';
+                                <td class="color">' . $rec['content'] . '</td>
+                                <td class="color">' . $rec['answerA'] . '</td>
+                                <td class="color">' . $rec['answerB'] . '</td>
+                                <td class="color">' . $rec['answerC'] . '</td>
+                                <td class="color">' . $rec['answerD'] . '</td>
+                                <td>' . $answers[$index] . '</td>
+                                <td class="correctAnswer">' . $rec['correctAnswer'] . '</td>
+                            </tr>';
                     } else {
 
-                        echo '<script type="text/javascript">console.log("jajco ' . $answers[$index] . '");</script>';
-
+                        // w przypadku niepoprawnej odpowiedzi wysyłamy zapytanie o pytanie z id i wyświetlamy
                         $getQuestion = "SELECT * FROM `que` WHERE id=$questionId";
                         $question = $mysqli->query($getQuestion);
 
                         while ($rec = $question->fetch_array()) {
                             echo '<tr class="incorrect">
-                            <td class="color">' . $rec['content'] . '</td>
-                            <td class="color">' . $rec['answerA'] . '</td>
-                            <td class="color">' . $rec['answerB'] . '</td>
-                            <td class="color">' . $rec['answerC'] . '</td>
-                            <td class="color">' . $rec['answerD'] . '</td>
-                            <td>' . $answers[$index] . '</td>
-                            <td class="correctAnswer">' . $rec['correctAnswer'] . '</td>
-                        </tr>';
+                                    <td class="color">' . $rec['content'] . '</td>
+                                    <td class="color">' . $rec['answerA'] . '</td>
+                                    <td class="color">' . $rec['answerB'] . '</td>
+                                    <td class="color">' . $rec['answerC'] . '</td>
+                                    <td class="color">' . $rec['answerD'] . '</td>
+                                    <td>' . $answers[$index] . '</td>
+                                    <td class="correctAnswer">' . $rec['correctAnswer'] . '</td>
+                                </tr>';
                         }
                     }
                 }
 
                 ?>
+
                 <table>
         </div>
 
     </div>
+
 </body>
