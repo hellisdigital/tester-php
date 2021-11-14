@@ -12,9 +12,9 @@
 
 #### Funkcje panelu administratora:
 
-- [ ] dodawanie, usuwanie oraz modyfikacja pytań i odpowiedzi
-- [ ] wskazanie odpowiedzi prawidłowej
-- [ ] usuwanie użytkowników
+- [x] dodawanie, usuwanie oraz modyfikacja pytań i odpowiedzi
+- [x] wskazanie odpowiedzi prawidłowej
+- [x] usuwanie użytkowników
 - [x] pokazanie statystyk (dla każdego pytania liczba poprawnych/niepoprawnych odpowiedzi, dla każdego użytkownika liczba poprawnych/niepoprawnych odpowiedzi, ranking 10 najtrudniejszych pytań, ranking 10 najlepszych użytkowników)
 
 #### Funkcje dostępne dla pozostałych użytkowników (po zalogowaniu):
