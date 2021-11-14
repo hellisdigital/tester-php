@@ -44,7 +44,7 @@
 
         <div class="tableDiv">
 
-            <h3>10 Użytkowników z najlepszymi wynikami</h3>
+            <h3>10 Użytkowników Z Najlepszymi Wynikami</h3>
 
             <table border=1 class="table table-striped table-bordered">
 
@@ -62,11 +62,8 @@
                 // połączenie z bazą danych
                 $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
 
-
                 // komenda sql do wyliczenia procentowej ilości poprawnych odpowiedzi udzielanych przez użytkownika
                 $getUsers = "SELECT * FROM `users` WHERE isAdmin=0 ORDER BY correctCount/(incorrectCount+correctCount) DESC ";
-
-                // wykonanie komendy
                 $usersScores = $mysqli->query($getUsers) or die('Problem z bazą danych');
 
 
@@ -80,8 +77,8 @@
                         $correctProcentage = $correctProcentage . '%';
                     }
 
-                    // wyświetlamy tabelę za pomocą echo
 
+                    // wyświetlamy tabelę za pomocą echo
                     echo '<tr>';
                     echo '<td>' . $rec['login'] . '</td>';
                     echo '<td>' . $rec['correctCount'] . '</td>';
