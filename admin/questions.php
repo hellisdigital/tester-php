@@ -117,7 +117,9 @@
 
         <?php
 
-        $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+        // połączenie z bazą danych
+        require('../examplePassword.php');
+        $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
         $getAllQuestions = "SELECT * FROM `que`";
 
@@ -219,7 +221,9 @@
 
         <?php
 
-        $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+        // połączenie z bazą danych
+        require('../examplePassword.php');
+        $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             switch ($_GET['action']) {

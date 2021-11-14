@@ -2,8 +2,9 @@
 
 session_start();
 
-// łączymy z bazą danych
-$mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+// połączenie z bazą danych
+require('../examplePassword.php');
+$mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -146,8 +147,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <?php
 
-                    // łączymy z bazą danych
-                    $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                    // połączenie z bazą danych
+                    require('../examplePassword.php');
+                    $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
                     // zmienna do przechowywania wszystkich wylosowanych pytań
                     $allSelQueIds = array();

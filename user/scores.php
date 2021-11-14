@@ -60,7 +60,8 @@
                 <?php
 
                 // połączenie z bazą danych
-                $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                require('../examplePassword.php');
+                $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
                 // komenda sql do wyliczenia procentowej ilości poprawnych odpowiedzi udzielanych przez użytkownika
                 $getUsers = "SELECT * FROM `users` WHERE isAdmin=0 ORDER BY correctCount/(incorrectCount+correctCount) DESC ";

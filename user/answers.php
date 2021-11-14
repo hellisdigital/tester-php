@@ -59,7 +59,8 @@
                 session_start();
 
                 // połączenie z bazą danych
-                $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                require('../examplePassword.php');
+                $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
                 // pytania które wylosował użytkownik oraz jego odpowiedzi
                 $userQuestions = $_SESSION['questions'];

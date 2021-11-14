@@ -61,7 +61,8 @@
                 <?php
 
                 // połączenie z bazą danych
-                $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                require('../examplePassword.php');
+                $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
                 // Bierzemy wszystkich użytkowników
                 $getAllUsers = "SELECT * FROM `users`";
@@ -95,7 +96,10 @@
 
         if ($_GET['action'] == 'delete') {
 
-            $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+            // połączenie z bazą danych
+            require('../examplePassword.php');
+            $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
+
             $id = $_POST['deleteButton'];
 
             $deleteUser =  "DELETE  FROM `users` WHERE id = '$id'";

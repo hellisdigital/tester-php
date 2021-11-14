@@ -62,7 +62,8 @@
                 <?php
 
                 // połączenie z bazą danych
-                $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                require('../examplePassword.php');
+                $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
 
                 // komenda sql do wyliczenia procentowej ilości poprawnych odpowiedzi udzielanych przez użytkownika
@@ -112,7 +113,8 @@
                 <?php
 
                 // połączenie z bazą danych
-                $mysqli = mysqli_connect('localhost', 'root', '', 'pytania');
+                require('../examplePassword.php');
+                $mysqli = mysqli_connect($databaseAddress, $databaseUsername, $databasePassword, $databaseName);
 
                 // komenda sql do wyliczenia procentowej ilość poprawnych odpowiedzi
                 //$getQuestions = "SELECT * FROM `que` WHERE incorrectAnswers+correctAnswers!=0 ORDER BY correctAnswers/(incorrectAnswers+correctAnswers) , incorrectAnswers DESC LIMIT 10  ";
