@@ -9,7 +9,7 @@
     <title>Panel Administratora</title>
 
     <!-- bootstrap  -->
-    <script type="javascript" src="../libs/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../libs/bootstrap.min.css">
 
     <link rel="stylesheet" href="../css/adminStyle.css">
@@ -55,55 +55,53 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="questionContent"></textarea>
 
                     </div>
-                    <div class="form-group form-answer">
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerARadio" value="A">
-                            <label class="form-check-label" for="answerARadio">A</label>
+                    <div class="form-group form-answer formAnswer">
+                        <div>
+                            <label for="addAnswerARadio">Treść Odpowiedzi A</label>
                         </div>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="addAnswerARadio" value="A" aria-label="Radio button for following text input">
+                            </div>
+                            <input type="text" class="form-control" id="addAnswerAText" aria-label="Text input with radio button" name="addAnswerA">
 
-                        <div class="form-answer-content">
-                            <label for="answerAText">Treść Odpowiedzi A</label>
-                            <textarea class="form-control" id="answerAText" rows="1" name="answerA"></textarea>
-                        </div>
-
-                    </div>
-                    <div class="form-group form-answer">
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerBRadio" value="B">
-                            <label class="form-check-label" for="answerBRadio">B</label>
-                        </div>
-
-                        <div class="form-answer-content">
-                            <label for="answerBText">Treść Odpowiedzi B</label>
-                            <textarea class="form-control" id="answerBText" rows="1" name="answerB"></textarea>
                         </div>
 
                     </div>
-                    <div class="form-group form-answer">
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerCRadio" value="C">
-                            <label class="form-check-label" for="answerCRadio">C</label>
-                        </div>
+                    <div class="form-group form-answer formAnswer">
+                        <label for="addAnswerBRadio">Treść Odpowiedzi B</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="addAnswerBRadio" value="B" aria-label="Radio button for following text input">
+                            </div>
+                            <input type="text" class="form-control" id="addAnswerBText" aria-label="Text input with radio button" name="addAnswerB">
 
-                        <div class="form-answer-content">
-                            <label for="answerCText">Treść Odpowiedzi C</label>
-                            <textarea class="form-control" id="answerCText" rows="1" name="answerC"></textarea>
                         </div>
 
                     </div>
-                    <div class="form-group form-answer">
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerDRadio" value="D">
-                            <label class="form-check-label" for="answerDRadio">D</label>
+                    <div class="form-group form-answer formAnswer">
+                        <label for="addAnswerCRadio">Treść Odpowiedzi C</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="addAnswerCRadio" value="C" aria-label="Radio button for following text input">
+                            </div>
+                            <input type="text" class="form-control" id="addAnswerCText" aria-label="Text input with radio button" name="addAnswerC">
+
                         </div>
 
-                        <div class="form-answer-content">
-                            <label for="answerD">Treść Odpowiedzi D</label>
-                            <textarea class="form-control" id="answerDText" rows="1" name="answerD"></textarea>
+                    </div>
+
+                    <div class="form-group form-answer formAnswer">
+                        <label for="addAnswerDRadio">Treść Odpowiedzi D</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="addAnswerDRadio" value="D" aria-label="Radio button for following text input">
+                            </div>
+                            <input type="text" class="form-control" id="addAnswerDText" aria-label="Text input with radio button" name="addAnswerD">
+
                         </div>
 
                     </div>
@@ -138,69 +136,70 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="questionContent"><?= $rec['content'] ?></textarea>
 
                         </div>
-                        <div class="form-group form-answer">
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerARadio" value="A" <?php if ($rec['correctAnswer']  == "A") {
-                                                                                                                                        echo 'checked';
-                                                                                                                                    } ?>>
-                                <label class="form-check-label" for="answerARadio">A</label>
+                        <div class="form-group form-answer formAnswer">
+                            <div>
+                                <label for="AnswerARadio">Treść Odpowiedzi A</label>
                             </div>
-
-                            <div class="form-answer-content">
-                                <label for="answerAText">Treść Odpowiedzi A</label>
-                                <textarea class="form-control" id="answerAText" rows="1" name="answerA"><?= $rec['answerA'] ?></textarea>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="AnswerARadio" value="A" aria-label="Radio button for following text input" <?php if ($rec['correctAnswer'] == "A") {
+                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                } ?>>
+                                </div>
+                                <input type="text" class="form-control" id="AnswerAText" aria-label="Text input with radio button" value="<?= $rec['answerA'] ?>" name="answerA">
                             </div>
-
                         </div>
-                        <div class="form-group form-answer">
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerBRadio" value="B" <?php if ($rec['correctAnswer']  == "B") {
-                                                                                                                                        echo 'checked';
-                                                                                                                                    } ?>>
-                                <label class="form-check-label" for="answerBRadio">B</label>
+                        <div class="form-group form-answer formAnswer">
+                            <div>
+                                <label for="AnswerBRadio">Treść Odpowiedzi B</label>
                             </div>
-
-                            <div class="form-answer-content">
-                                <label for="answerBText">Treść Odpowiedzi B</label>
-                                <textarea class="form-control" id="answerBText" rows="1" name="answerB"><?= $rec['answerB'] ?></textarea>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="AnswerBRadio" value="B" aria-label="Radio button for following text input" <?php if ($rec['correctAnswer'] == "B") {
+                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                } ?>>
+                                </div>
+                                <input type="text" class="form-control" id="AnswerBText" aria-label="Text input with radio button" value="<?= $rec['answerB'] ?> " name="answerB">
                             </div>
-
                         </div>
-                        <div class="form-group form-answer">
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerCRadio" value="C" <?php if ($rec['correctAnswer']  == "C") {
-                                                                                                                                        echo 'checked';
-                                                                                                                                    } ?>>
-                                <label class="form-check-label" for="answerCRadio">C</label>
+
+                        <div class="form-group form-answer formAnswer">
+                            <div>
+                                <label for="AnswerCRadio">Treść Odpowiedzi C</label>
                             </div>
-
-                            <div class="form-answer-content">
-                                <label for="answerCText">Treść Odpowiedzi C</label>
-                                <textarea class="form-control" id="answerCText" rows="1" name="answerC"><?= $rec['answerC'] ?></textarea>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="AnswerCRadio" value="C" aria-label="Radio button for following text input" <?php if ($rec['correctAnswer'] == "C") {
+                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                } ?>>
+                                </div>
+                                <input type="text" class="form-control" id="AnswerCText" aria-label="Text input with radio button" value="<?= $rec['answerC'] ?>" name="answerC">
                             </div>
-
                         </div>
-                        <div class="form-group form-answer">
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="answerDRadio" value="D" <?php if ($rec['correctAnswer']  == "D") {
-                                                                                                                                        echo 'checked';
-                                                                                                                                    } ?>>
-                                <label class="form-check-label" for="answerDRadio">D</label>
+
+                        <div class="form-group form-answer formAnswer">
+                            <div>
+                                <label for="AnswerDRadio">Treść Odpowiedzi D</label>
                             </div>
-
-                            <div class="form-answer-content">
-                                <label for="answerD">Treść Odpowiedzi D</label>
-                                <textarea class="form-control" id="answerDText" rows="1" name="answerD"><?= $rec['answerD'] ?></textarea>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="inlineRadioOptions" id="AnswerDRadio" value="D" aria-label="Radio button for following text input" <?php if ($rec['correctAnswer'] == "D") {
+                                                                                                                                                                                                    echo 'checked';
+                                                                                                                                                                                                } ?>>
+                                </div>
+                                <input type="text" class="form-control" id="AnswerDText" aria-label="Text input with radio button" value="<?= $rec['answerD'] ?>" name="answerD">
                             </div>
-
                         </div>
+
                         <div class="form-group form-button">
                             <button type="submit" class="btn btn-warning" name="updateQuestionButton" value="<?= $rec['id'] ?>">Zaaktualizuj pytanie</button>
                         </div>
+
+
                     </form>
 
                     <div class="form-button">
@@ -230,10 +229,10 @@
 
                 case 'addQuestion':
                     $question = $_POST['questionContent'];
-                    $answerA = $_POST['answerA'];
-                    $answerB = $_POST['answerB'];
-                    $answerC = $_POST['answerC'];
-                    $answerD = $_POST['answerD'];
+                    $answerA = $_POST['addAnswerA'];
+                    $answerB = $_POST['addAnswerB'];
+                    $answerC = $_POST['addAnswerC'];
+                    $answerD = $_POST['addAnswerD'];
                     $radio = $_POST['inlineRadioOptions'];
 
                     $addQuestion = "INSERT INTO `que` (content, answerA, answerB, answerC, answerD , correctAnswer, correctAnswers, incorrectAnswers) VALUES ('$question','$answerA','$answerB','$answerC', '$answerD', '$radio', 0, 0)";
@@ -254,6 +253,8 @@
                     $answerD = $_POST['answerD'];
                     $id = $_POST['updateQuestionButton'];
                     $radio = $_POST['inlineRadioOptions'];
+
+                    echo '<script type="text/javascript">alert("Pytanie Zaktualizowane ' . $answerA . ' ")</script>';
 
                     $updateQue = "UPDATE `que` SET content='$question', answerA='$answerA', answerB='$answerB', answerC='$answerC', answerD='$answerD', correctAnswer='$radio' WHERE id='$id' ";
                     $updatedQue =  $mysqli->query($updateQue) or die('Problem z bazą danych');
