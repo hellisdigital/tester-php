@@ -240,7 +240,7 @@
 
                     if ($mysqli->query($addQuestion) == true) {
 
-                        echo '<script type="text/javascript">alert("Pytanie Dodane")</script>';
+                        echo '<script type="text/javascript">alert("Pytanie Dodane");window.location.href = "questions.php";</script>';
                     }
 
                     break;

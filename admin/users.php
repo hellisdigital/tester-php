@@ -80,7 +80,9 @@
                         <td><?= $rec['incorrectCount'] ?></td>
                         <td>
                             <form action="?action=delete" method="POST">
-                                <button type="submit" class="btn btn-danger" name="deleteButton" value='<?= $rec['id'] ?>'>Usuń Użytkownika!</button>
+                                <button type="submit" class="btn btn-danger" name="deleteButton" value='<?= $rec['id'] ?>' <?php if ($rec['login'] == 'admin') {
+                                                                                                                                echo 'disabled';
+                                                                                                                            } ?>>Usuń Użytkownika!</button>
                             </form>
                         </td>
                     </tr>
