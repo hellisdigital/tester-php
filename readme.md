@@ -1,6 +1,9 @@
+
 ## Temat projektu: Tester (aplikacja do przeprowadzania testów)
 
 #### Opis projektu: Aplikacja ma umożliwiać gromadzenie pytań testowych wraz z odpowiedziami, przeprowadzanie testów, wyświetlanie statystyk, rankingów.
+
+#### http://simple_quiz.ct8.pl
 
 #### Założenia:
 
@@ -19,8 +22,8 @@
 
 #### Funkcje dostępne dla pozostałych użytkowników (po zalogowaniu):
 
-- [ ] wylosowanie pytań (zawsze losowanych jest 10 pytań, ale nie mogą się one powtarzać w jednym losowaniu)
-- [ ] umożliwienie zaznaczenia poprawnych odpowiedzi
-- [ ] sprawdzenie liczby poprawnych/niepoprawnych odpowiedzi
-- [ ] przedstawienie wartości procentowej obliczonej jako iloraz poprawnych i wszystkich odpowiedzi
-- [ ] wyświetlenie 10 użytkowników, którzy osiągnęli najlepsze wyniki
+- [x] wylosowanie pytań (zawsze losowanych jest 10 pytań, ale nie mogą się one powtarzać w jednym losowaniu)
+- [x] umożliwienie zaznaczenia poprawnych odpowiedzi
+- [x] sprawdzenie liczby poprawnych/niepoprawnych odpowiedzi
+- [x] przedstawienie wartości procentowej obliczonej jako iloraz poprawnych i wszystkich odpowiedzi
+- [x] wyświetlenie 10 użytkowników, którzy osiągnęli najlepsze wyniki
