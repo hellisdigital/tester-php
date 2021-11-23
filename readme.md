@@ -7,11 +7,11 @@
 
 #### Założenia:
 
-[x] Aplikacja jest dostępna wyłącznie po zalogowaniu (login i hasło muszą mieć przynajmniej 6 dowolnych znaków).
-[x] Możliwa jest automatyczna rejestracja użytkowników po wcześniejszym sprawdzeniu czy login nie jest już zajęty.
-[x] Hasła przechowywane w bazie danych mają być szyfrowane.
-[x]Należy utworzyć konto użytkownika admin z hasłem admin.
-[x] Każde pytanie posiada zestaw czterech odpowiedzi, z których tylko jedna jest prawidłowa.
+- [x] Aplikacja jest dostępna wyłącznie po zalogowaniu (login i hasło muszą mieć przynajmniej 6 dowolnych znaków).
+- [x] Możliwa jest automatyczna rejestracja użytkowników po wcześniejszym sprawdzeniu czy login nie jest już zajęty.
+- [x] Hasła przechowywane w bazie danych mają być szyfrowane.
+- [x]Należy utworzyć konto użytkownika admin z hasłem admin.
+- [x] Każde pytanie posiada zestaw czterech odpowiedzi, z których tylko jedna jest prawidłowa.
 
 #### Funkcje panelu administratora:
 
